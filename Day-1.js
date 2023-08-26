@@ -1,11 +1,13 @@
-import { RAW_DATA } from "./RAW_DATA.js";
 //
 // Day - 1
 //
+
+import { RAW_DATA } from "./RAW_DATA.js";
+
 //need to sanitise the data
-let data = RAW_DATA.split("\n\n");
+const data = RAW_DATA.split("\n\n");
 // where theres a double newline is a different elf
-export const cleanData = data
+const cleanData = data
   .map((dirtyData) =>
     dirtyData
       .split("\n")
@@ -15,13 +17,7 @@ export const cleanData = data
   .sort((a, b) => a < b);
 
 console.log(cleanData[0]);
-//
-// Day - 2
-//
+//  Part 2
 const [a, b, c] = cleanData;
 
-console.log(a + b + c);
-
-//
-// Day - 3
-//
+// console.log(a + b + c);
