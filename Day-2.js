@@ -106,11 +106,14 @@ const plays2 = {
 };
 
 cleanData.map(([opponentsPlay, strategy]) => {
+  // trying to spice things up with a switch instead of if else if else
   switch (strategy) {
     case "X":
+      // look in points2 for the losing combination using the oponents play, if the opponents play is A plays2.losing[A] => C then points2[C] => 3 + lose (0) = 3
       score2 += lose + points2[plays2.losing[opponentsPlay]];
       break;
     case "Y":
+      // look in points2 for the losing combination using the oponents play, if the opponents play is B plays2.drawing[B] => B then points2[B] => 3 + draw (3) = 6
       score2 += draw + points2[plays2.drawing[opponentsPlay]];
       break;
     case "Z":
